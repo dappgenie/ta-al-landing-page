@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 157 100% 100%;
+    --foreground: 157 5% 10%;
+    --card: 157 50% 100%;
+    --card-foreground: 157 5% 15%;
+    --popover: 157 100% 100%;
+    --popover-foreground: 157 100% 10%;
+    --primary: 157 44.3% 53.5%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 157 30% 90%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 119 30% 95%;
+    --muted-foreground: 157 5% 40%;
+    --accent: 119 30% 90%;
+    --accent-foreground: 157 5% 15%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 157 5% 100%;
+    --border: 157 30% 82%;
+    --input: 157 30% 50%;
+    --ring: 157 44.3% 53.5%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 157 100% 100%;
+    --foreground: 157 5% 10%;
+    --card: 157 50% 100%;
+    --card-foreground: 157 5% 15%;
+    --popover: 157 100% 100%;
+    --popover-foreground: 157 100% 10%;
+    --primary: 157 44.3% 53.5%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 157 30% 90%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 119 30% 95%;
+    --muted-foreground: 157 5% 40%;
+    --accent: 119 30% 90%;
+    --accent-foreground: 157 5% 15%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 157 5% 100%;
+    --border: 157 30% 82%;
+    --input: 157 30% 50%;
+    --ring: 157 44.3% 53.5%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  section {
+    @apply w-screen overflow-x-hidden !px-10;
+  }
+
+  .footer-social-icon {
+    @apply w-8 h-8 bg-transparent hover:bg-primary text-primary hover:text-white border border-primary rounded-full p-1 flex items-center justify-center;
+  }
+
+  /* HeroCards background shadow */
+  .shadow {
+    position: absolute;
+    background: hsl(var(--primary) / 0%);
+    border-radius: 24px;
+    rotate: 35deg;
+
+    width: 260px;
+    top: 200px;
+    height: 400px;
+    filter: blur(150px);
+    animation: shadow-slide infinite 4s linear alternate;
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: hsl(var(--primary) / 20%);
+      right: 460px;
+    }
+
+    to {
+      background: hsl(var(--primary) / 80%);
+      right: 160px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .shadow {
+      top: 70px;
+    }
+
+    @keyframes shadow-slide {
+      from {
+        background: hsl(var(--primary) / 20%);
+        right: 460px;
+      }
+
+      to {
+        background: hsl(var(--primary) / 50%);
+        right: 160px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .shadow {
+      top: 70px;
+      width: 100px;
+      height: 350px;
+      filter: blur(60px);
+    }
+
+    @keyframes shadow-slide {
+      from {
+        background: hsl(var(--primary) / 20%);
+        right: 280px;
+      }
+
+      to {
+        background: hsl(var(--primary) / 30%);
+        right: 100px;
+      }
+    }
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: hsl(var(--primary) / 20%);
+      right: 460px;
+    }
+
+    to {
+      background: hsl(var(--primary) / 80%);
+      right: 160px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    @keyframes shadow-slide {
+      from {
+        background: hsl(var(--primary) / 20%);
+        right: 460px;
+      }
+
+      to {
+        background: hsl(var(--primary) / 50%);
+        right: 160px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    @keyframes shadow-slide {
+      from {
+        background: hsl(var(--primary) / 20%);
+        right: 280px;
+      }
+
+      to {
+        background: hsl(var(--primary) / 30%);
+        right: 100px;
+      }
+    }
+  }
+}
