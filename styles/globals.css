@@ -52,6 +52,7 @@
 
 @layer base {
   * {
+    box-sizing: border-box;
     @apply border-border;
     scroll-behavior: smooth;
   }
@@ -59,10 +60,6 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: 'rlig' 1, 'calt' 1;
-  }
-
-  section {
-    @apply w-screen overflow-x-hidden !px-10;
   }
 
   .footer-social-icon {

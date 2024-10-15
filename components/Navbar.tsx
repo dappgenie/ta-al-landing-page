@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -14,28 +13,20 @@ import {
 import useScreenSize from '@/lib/useScreenSize';
 import {
   NavigationMenu,
-  NavigationMenuItem,
   NavigationMenuList,
 } from '@/components/ui/navigation-menu';
-import {
-  Sheet,
-  SheetContent,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
 
+import SideNavbar from './side-navbar';
 import { Button, buttonVariants } from './ui/button';
 import { FloatingNav } from './ui/floating-navbar';
 
-interface RouteProps {
+export interface RouteProps {
   link: string;
   name: string;
   icon?: JSX.Element;
 }
 
-const routeList: RouteProps[] = [
+export const routeList: RouteProps[] = [
   {
     link: '#about_us',
     name: 'About Us',
@@ -46,10 +37,6 @@ const routeList: RouteProps[] = [
     name: 'How It Works',
     icon: <Network />,
   },
-  // {
-  //   link: "#pricing",
-  //   name: "Pricing",
-  // },
   {
     link: '#faq',
     name: 'FAQ',
@@ -58,100 +45,46 @@ const routeList: RouteProps[] = [
 ];
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const screenSize = useScreenSize();
   return (
     <>
       <FloatingNav navItems={routeList} />
-      <header className='z-40 w-full py-4 bg-white/60 backdrop-blur-sm w-screen overflow-hidden'>
-        <NavigationMenu className='mx-auto'>
-          <NavigationMenuList className='container flex items-center justify-between w-screen px-4 h-14'>
-            <NavigationMenuItem className='flex font-bold'>
-              <a href='/' className='flex ml-2 text-xl font-bold'>
-                <Image
-                  src='/images/logo.svg'
-                  alt='logo'
-                  className='object-scale-down '
-                  width='135'
-                  height='52'
-                />
-              </a>
-            </NavigationMenuItem>
-
-            {/* mobile */}
-            <span className='flex md:hidden'>
-              <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                <SheetTrigger className='px-2'>
-                  <Menu
-                    className='flex size-5 md:hidden'
-                    onClick={() => setIsOpen(true)}
-                  />
-                </SheetTrigger>
-
-                <SheetContent className='py-16' side={'left'}>
-                  <SheetHeader>
-                    <SheetTitle className='mb-8 text-xl font-bold'>
-                      <Image
-                        src='/images/logo.svg'
-                        alt='logo'
-                        className='object-scale-down mx-auto'
-                        width='180'
-                        height='60'
-                      />
-                    </SheetTitle>
-                  </SheetHeader>
-                  <nav className='flex flex-col items-center justify-center gap-2 mt-4'>
-                    {routeList.map(({ link, name }: RouteProps) => (
-                      <a
-                        key={name}
-                        href={link}
-                        onClick={() => setIsOpen(false)}
-                        className={buttonVariants({ variant: 'ghost' })}
-                      >
-                        <span className='py-4'>{name}</span>
-                      </a>
-                    ))}
-                  </nav>
-                  <SheetFooter className='mt-8'>
-                    <Link
-                      href='https://app.xnodes.bot'
-                      className='mx-auto'
-                      target='_blank'
-                    >
-                      <Button>
-                        Launch App
-                        <Rocket className='ml-2 size-5' />
-                      </Button>
-                    </Link>
-                  </SheetFooter>
-                </SheetContent>
-              </Sheet>
-            </span>
-
-            {/* desktop */}
-            <nav className='hidden gap-2 md:flex'>
-              {routeList.map((route: RouteProps, i) => (
-                <a
-                  href={route.link}
-                  key={route.name}
-                  className={`text-[17px] ${buttonVariants({
-                    variant: 'ghost',
-                  })}`}
-                >
-                  {route.name}
-                </a>
-              ))}
-              {screenSize.width >= 1024 && (
-                <Link href='https://app.xnodes.bot' target='_blank'>
-                  <Button>
-                    Launch App
-                    <Rocket className='ml-2 size-5' />
-                  </Button>
-                </Link>
-              )}
-            </nav>
+      <header className='xl:container flex items-center justify-between py-5 lg:py-10 px-4 lg:px-10 xl:px-16  bg-white/60 backdrop-blur-sm'>
+        <Link href='/' className='flex ml-2 text-xl font-bold'>
+          <Image
+            src='/images/logo.svg'
+            alt='logo'
+            className='w-[70px] h-auto lg:w-[135px] object-contain'
+            width='135'
+            height='52'
+          />
+        </Link>
+        <NavigationMenu>
+          <NavigationMenuList className='hidden gap-2 md:flex'>
+            {routeList.map((route: RouteProps) => (
+              <Link
+                href={route.link}
+                key={route.name}
+                className={`text-[17px] ${buttonVariants({
+                  variant: 'ghost',
+                })}`}
+              >
+                {route.name}
+              </Link>
+            ))}
+            {screenSize.width >= 768 && (
+              <Link href='https://app.xnodes.bot' target='_blank'>
+                <Button>
+                  Launch App
+                  <Rocket className='ml-2 size-5' />
+                </Button>
+              </Link>
+            )}
           </NavigationMenuList>
         </NavigationMenu>
+        <SideNavbar>
+          <Menu className='w-[20px] h-auto md:hidden' />
+        </SideNavbar>
       </header>
     </>
   );

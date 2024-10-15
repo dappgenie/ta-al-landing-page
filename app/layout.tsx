@@ -77,7 +77,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </Head>
       <body
         className={cn(
-          'min-h-screen bg-background font-inter antialiased w-screen overflow-x-hidden relative',
+          'min-h-screen bg-background font-inter antialiased relative',
           inter.className,
           inter.variable
         )}
@@ -85,9 +85,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {
           <>
             <Preloader />
-            <div className='relative flex min-h-screen flex-col overflow-y-auto'>
-              <div className='flex-1'>{children}</div>
-            </div>
+            {children}
+            {/* <div className='relative flex min-h-screen flex-col overflow-y-auto'> */}
+            {/* <div className='flex-1'>{children}</div> */}
+            {/* </div> */}
           </>
         }
       </body>

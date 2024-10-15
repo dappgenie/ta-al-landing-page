@@ -1,10 +1,41 @@
 {
-  "typescript.tsdk": "../../node_modules/.pnpm/typescript@4.9.5/node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": [
-    "kodchasan",
-    "tailwindcss"
-  ],
   "editor.formatOnSave": true,
-  "headwind.runOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.sortMembers": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // vscode.typescript-language-features
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": true,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+
+  "cSpell.enabled": true,
+  "cSpell.logLevel": "Debug",
+  "editor.tabSize": 2,
+
+  "cSpell.words": [
+    "apdex",
+    "camelcase",
+    "CLOUDINARY",
+    "clsx",
+    "destr",
+    "Flipkart",
+    "Giftcard",
+    "giftcards",
+    "mailgun",
+    "sharbi",
+    "Subdocument",
+    "turso"
+  ],
+  "notebook.formatOnSave.enabled": false
 }
