@@ -1,13 +1,16 @@
 import Image from 'next/image';
+import whyTaalImg from '@/public/images/why_taal.png';
 
 import { Transition } from './Transition';
+import MoneyTransferSuccess from './highlight-elements/money-transfer';
+import TotalIncome from './highlight-elements/total-income';
 
 export const WhyTaal = () => {
   return (
     <section id='howItWorks' className='container py-16 sm:py-24'>
       <Transition
         animationType='left'
-        className='mb-4 text-3xl font-bold md:text-4xl'
+        className='text-3xl font-bold md:text-4xl'
       >
         Why Ta’al?
       </Transition>
@@ -32,12 +35,18 @@ export const WhyTaal = () => {
             Secure Transactions: Safe and reliable payment methods.
           </div>
         </div>
-        <Image
-          src='/images/why_taal.png'
-          alt='why_taal'
-          width={300}
-          height={400}
-        />
+        <div className='relative'>
+          <Image
+            src={whyTaalImg}
+            alt='why-taal'
+            quality={100}
+            width={450}
+            height={500}
+            className='object-contain max-h-[450px]'
+          />
+          <TotalIncome className='absolute top-[7%] -right-[5%]' />
+          <MoneyTransferSuccess className='absolute bottom-7 -left-[40%]' />
+        </div>
       </div>
     </section>
   );

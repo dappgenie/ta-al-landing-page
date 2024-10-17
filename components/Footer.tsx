@@ -6,22 +6,43 @@ import { Button } from './ui/button';
 
 export const Footer = () => {
   return (
-    <footer id='footer' className='bg-background'>
+    <footer id='footer' className='bg-background pt-4 pb-10'>
       <hr className='w-full mx-auto' />
-
-      <section className='container py-20 grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-8'>
-        <div className='flex col-span-2 flex-col justify-self-center'>
+      <section className='container w-full flex flex-col lg:flex-row justify-between gap-x-12 gap-y-8'>
+        <div className='flex flex-col'>
           <Image
             src='/images/footer_logo.png'
             width={130}
             height={160}
-            className='w-[130px] m-auto h-[160px] object-scale-down'
+            className='w-[130px] h-[160px] object-contain'
             alt='Logo'
           />
+          <div className='flex justify-start items-center space-x-6 md:ml-[-35px]'>
+            <Image
+              src='/images/app-store.png'
+              alt='app-store'
+              className='rounded-md object-contain max-w-[150px]'
+              width={200}
+              quality={100}
+              height={72}
+            />
+            <Image
+              src='/images/google-play.png'
+              alt='google-play'
+              className='rounded-md object-contain max-w-[150px]'
+              width={200}
+              quality={100}
+              height={72}
+            />
+          </div>
+          <div className='flex gap-x-5 text-sm text-[#0D0D0D] mt-7 flex-wrap'>
+            <span>© 2024 EazyGig. All Rights Reserved.</span>
+            <span>Terms & Conditions</span>
+            <span>Privacy policy</span>
+          </div>
         </div>
 
-        <div className='flex flex-col gap-2 lg:col-span-1 text-center lg:text-left justify-self-center lg:justify-self-start'>
-          {/* <h3 className='font-bold text-lg'>Community</h3> */}
+        <div className='flex flex-col justify-center items-start gap-2 lg:col-span-1 text-center lg:text-left justify-self-center lg:justify-self-start'>
           <div>
             <Link href='#' className='opacity-60 hover:opacity-100'>
               Home
@@ -40,7 +61,7 @@ export const Footer = () => {
             </Link>
           </div>
           <Link href='https://app.xnodes.bot' target='_blank'>
-            <Button variant='footer' className='px-4 !py-0.5 w-fit my-3'>
+            <Button variant='footer' className='px-0'>
               Launch App
               <Rocket className='ml-2 size-5' />
             </Button>

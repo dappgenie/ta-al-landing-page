@@ -62,6 +62,10 @@
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
   .footer-social-icon {
     @apply w-8 h-8 bg-transparent hover:bg-primary text-primary hover:text-white border border-primary rounded-full p-1 flex items-center justify-center;
   }
