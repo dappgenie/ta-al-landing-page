@@ -20,7 +20,7 @@ export const Hero = () => {
           Start earning <br />
           instantly!
         </h1>
-        <div className='flex mt-4 justify-between md:justify-center lg:justify-start items-center md:space-x-6 md:ml-[-35px]'>
+        <div className='flex mt-4 justify-center gap-x-6 lg:justify-start items-center md:ml-[-35px]'>
           <Image
             src='/images/app-store.png'
             alt='app-store'

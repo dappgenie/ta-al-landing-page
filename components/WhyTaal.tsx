@@ -48,7 +48,7 @@ export const WhyTaal = () => {
             quality={100}
             width={450}
             height={500}
-            className='object-contain md:w-[250px] md:h-auto lg:w-full max-h-[450px]'
+            className='object-contain w-full sm:w-[250px] md:w-[250px] md:h-auto lg:w-full max-h-[450px]'
           />
           <TotalIncome className='absolute -top-14 right-2 lg:top-[7%] lg:-right-[5%]' />
           <MoneyTransferSuccess className='absolute -bottom-5 md:-bottom-20 lg:bottom-7 lg:-left-[40%]' />
