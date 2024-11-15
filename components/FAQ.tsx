@@ -117,7 +117,7 @@ export const FAQ = () => {
             </AccordionItem>
           ))}
         </Accordion>
-        <h3 className='mt-4 font-medium px-2 lg:px-4'>
+        {/* <h3 className='mt-4 font-medium px-2 lg:px-4'>
           Still have questions?{' '}
           <Link
             href={SOCIAL_LINKS.telegram}
@@ -125,7 +125,7 @@ export const FAQ = () => {
           >
             Join Our Community
           </Link>
-        </h3>
+        </h3> */}
       </Transition>
     </section>
   );

@@ -54,7 +54,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en' suppressHydrationWarning>
       <Head>
-        <title>XNodes</title>
+        <title>Ta-al</title>
         <meta
           name='description'
           content='Beyond Blockchain. Beyond Earnings.'
@@ -64,20 +64,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='en_US' />
-        <meta property='og:site_name' content='XNodes' />
+        <meta property='og:site_name' content='Ta-al' />
         <meta
           property='og:description'
           content='Beyond Blockchain. Beyond Earnings.'
         />
-        <meta property='og:url' content='https://xnodes.dappgenie.io/' />
-        <meta property='og:title' content='XNodes' />
-        <meta
-          property='og:image'
-          content='https://res.cloudinary.com/dmrxi1emm/image/upload/v1714766008/xnodes_og_image-03_yuyhtm.png'
-        />
-        <meta property='og:image:width' content='1200' />
-        <meta property='og:image:height' content='630' />
-        <meta property='og:image:alt' content='XNodes OG Image' />
       </Head>
       <body
         className={cn(
