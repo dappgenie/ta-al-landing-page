@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: 'Ta-al',
-  description: 'Beyond Blockchain. Beyond Earnings.',
+  description: 'Complete gigs, get paid within hours. Start earning instantly!',
   mainNav: [
     {
       title: 'Home',

@@ -57,7 +57,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <title>Ta-al</title>
         <meta
           name='description'
-          content='Beyond Blockchain. Beyond Earnings.'
+          content='Complete gigs, get paid within hours. Start earning instantly!'
         />
         <link rel='icon' href='/favicon.ico' />
         <link rel='shortcut icon' href='/favicon.ico' />
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta property='og:site_name' content='Ta-al' />
         <meta
           property='og:description'
-          content='Beyond Blockchain. Beyond Earnings.'
+          content='Complete gigs, get paid within hours. Start earning instantly!'
         />
       </Head>
       <body
