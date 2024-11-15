@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import whyTaalImg from '@/public/images/why_taal.png';
 
+import { CheckIcon } from '@/lib/index-icons';
+
 import { Transition } from './Transition';
 import MoneyTransferSuccess from './highlight-elements/money-transfer';
 import TotalIncome from './highlight-elements/total-income';
@@ -12,40 +14,44 @@ export const WhyTaal = () => {
         animationType='left'
         className='text-3xl font-bold md:text-4xl'
       >
-        Why Ta’al?
+        Why Ta'al?
       </Transition>
 
-      <div className='flex flex-col sm:flex-row items-center justify-between gap-8'>
+      <div className='flex flex-col sm:flex-row items-center justify-between gap-8 mt-10 lg:mt-0'>
         <div className='flex flex-col items-start justify-center space-y-4'>
           <div className='flex justify-start items-center gap-4'>
-            <Image src='/images/check.svg' alt='check' width={30} height={30} />
-            Instant Payments: Get paid within hours of completing gigs.
+            <CheckIcon className='shrink-0' width={30} height={30} />
+            Effortless Application Process: No lengthy paperwork or complex
+            processes. Our app is designed for easy navigation and quick
+            applications.
           </div>
           <div className='flex justify-start items-center gap-4'>
-            <Image src='/images/check.svg' alt='check' width={30} height={30} />
-            Diverse Opportunities: Browse a wide range of gigs tailored to your
-            skills.
+            <CheckIcon className='shrink-0' width={30} height={30} />
+            Real-Time Notifications: Get updates on your application status so
+            you're always in the loop.
           </div>
           <div className='flex justify-start items-center gap-4'>
-            <Image src='/images/check.svg' alt='check' width={30} height={30} />
-            User-Friendly: Easy navigation and quick application process.
+            <CheckIcon className='shrink-0' width={30} height={30} />
+            Verified Opportunities: We work with trusted agencies and employers
+            to bring you legitimate, safe gig opportunities more flexible.{' '}
           </div>
           <div className='flex justify-start items-center gap-4'>
-            <Image src='/images/check.svg' alt='check' width={30} height={30} />
-            Secure Transactions: Safe and reliable payment methods.
+            <CheckIcon className='shrink-0' width={30} height={30} />A Community
+            Focused on Flexibility: We know that time is valuable. Ta'al is
+            dedicated to making the job hunt simpler and more flexible.{' '}
           </div>
         </div>
-        <div className='relative'>
+        <div className='relative shrink-0 mt-14 md:mt-0'>
           <Image
             src={whyTaalImg}
             alt='why-taal'
             quality={100}
             width={450}
             height={500}
-            className='object-contain max-h-[450px]'
+            className='object-contain md:w-[250px] md:h-auto lg:w-full max-h-[450px]'
           />
-          <TotalIncome className='absolute top-[7%] -right-[5%]' />
-          <MoneyTransferSuccess className='absolute bottom-7 -left-[40%]' />
+          <TotalIncome className='absolute -top-14 right-2 lg:top-[7%] lg:-right-[5%]' />
+          <MoneyTransferSuccess className='absolute -bottom-5 md:-bottom-20 lg:bottom-7 lg:-left-[40%]' />
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
+'use client';
+
 import Link from 'next/link';
-import { HandCoins } from 'lucide-react';
 
 import { SOCIAL_LINKS } from '@/lib/constants';
 import {
@@ -9,9 +10,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-import { DocumentationLink } from './DocumentationLink';
 import { Transition } from './Transition';
-import { Button, buttonVariants } from './ui/button';
 
 interface FAQProps {
   question: string;
@@ -21,94 +20,75 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: 'How do I get started with XNodes?',
+    question: `What is Ta'al?`,
     answer: (
       <p>
-        To join XNodes, you'll need to secure a Base Node with an initial
-        investment. Connect your crypto wallet, purchase your Base Node. This
-        marks your entry into the network and enables you to participate in its
-        earning mechanisms.
+        Ta'al is an app that connects users with part-time gig opportunities.
+        Whether you're looking for flexible work or temporary positions, Ta'al
+        helps you find and apply for jobs quickly and easily.
       </p>
     ),
     value: 'item-1',
   },
   {
-    question: 'Can I create multiple Base Nodes?',
+    question: `How do I get started with Ta'al?`,
     answer: (
       <p>
-        No, each address can only have one Base Node. This ensures a balanced
-        network structure and fair earning potential for all participants.
-        However, you can strategically expand your network by creating
-        additional Sponsor Nodes.
+        Simply download the Ta'al app from playstore or appstore, create an
+        account, and complete the registration process by uploading your ID,
+        photo, and other necessary details. Once verified, you can start
+        browsing and applying for available gigs.
       </p>
     ),
     value: 'item-2',
   },
   {
-    question: 'How do I earn rewards on XNodes?',
+    question: `Is there a registration fee to join Ta'al?`,
     answer: (
-      <div>
-        XNodes offers multiple earning avenues:
-        <ul className='list-disc'>
-          <li>
-            <b>Direct Commissions: </b>Earn by creating Base Nodes and Sponsor
-            Nodes within your direct network.
-          </li>
-          <li>
-            <b>Indirect Commissions: </b>Benefit from the growth of your broader
-            network, including earnings from Rebirth Nodes.
-          </li>
-          <li>
-            <b>Rebirth Mechanism: </b>When your earnings reach a designated
-            threshold, reinvest a portion or automatically trigger the creation
-            of a Rebirth Node, further amplifying your earnings potential.
-          </li>
-        </ul>
-      </div>
+      <p>
+        No, registering on Ta'al is completely free. We connect you with job
+        opportunities without any initial charges.
+      </p>
     ),
     value: 'item-3',
   },
   {
-    question: 'What is a Rebirth Node and how does it work?',
+    question: 'What documents are required for registration?',
     answer: (
       <p>
-        A Rebirth Node is a unique feature of XNodes that promotes sustained
-        growth. When your earnings reach a specific threshold, a Rebirth Node is
-        automatically generated and strategically placed within the network.
-        Rebirth Nodes contribute to your overall indirect earnings.
+        You will need a valid Emirates ID,2-3 recent photos, and some basic
+        personal information to complete your profile and start applying for
+        gigs.
       </p>
     ),
     value: 'item-4',
   },
   {
-    question: 'Are my investments on XNodes secure?',
+    question: 'How do I apply for a gig?',
     answer: (
       <p>
-        XNodes leverages blockchain technology to provide a secure and
-        transparent foundation for transactions and earnings tracking. The
-        immutable nature of the blockchain ensures that your investments and
-        rewards are protected.
+        After setting up your profile, browse the available gigs on the app,
+        select the one you're interested in, and click 'Apply.' You'll be
+        notified of your application status as soon as there's an update.
+        <br />
+        <br />
+        <br />
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut soluta
+        quaerat veniam nostrum temporibus ut quod, placeat inventore est et.
+        Reiciendis quasi a debitis atque, illum aperiam tempore sint corrupti.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+        consectetur porro. Repellendus numquam facilis repudiandae iste rem ut
+        impedit quasi voluptas? Ut officia delectus corporis asperiores repellat
+        obcaecati enim id.
       </p>
     ),
     value: 'item-5',
   },
   {
-    question: 'Is there a limit to how much I can earn?',
+    question: `How will I know if I've been selected for a gig?`,
     answer:
-      "XNodes offers unlimited earning potential. Your rewards directly correlate with your network's growth and activity. As you strategically expand your network and reinvest your earnings, you increase your potential for maximizing your passive income.",
+      'You will receive a notification through the app if your application has been accepted or if there’s any further action required. Make sure to keep your notifications turned on..',
     value: 'item-6',
-  },
-  {
-    question: 'Where can I find more information about XNodes?',
-    answer: (
-      <Link href='https://app.xnodes.bot' target='_blank'>
-        <Button className='w-full min-w-[200px] md:mr-4 md:w-52 m-1'>
-          Start Earning Today
-          <HandCoins className='ml-2 size-5' />
-        </Button>
-      </Link>
-    ),
-    value: 'item-7',
   },
 ];
 
@@ -137,7 +117,7 @@ export const FAQ = () => {
             </AccordionItem>
           ))}
         </Accordion>
-        <h3 className='mt-4 font-medium'>
+        <h3 className='mt-4 font-medium px-2 lg:px-4'>
           Still have questions?{' '}
           <Link
             href={SOCIAL_LINKS.telegram}

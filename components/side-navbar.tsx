@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Rocket } from 'lucide-react';
+import { DownloadIcon, Rocket } from 'lucide-react';
 
 import {
   Sheet,
@@ -44,14 +44,10 @@ const SideNavbar = ({ children }: { children: React.ReactNode }) => {
           ))}
         </nav>
         <SheetFooter className='mt-8'>
-          <Link
-            href='https://app.xnodes.bot'
-            className='mx-auto'
-            target='_blank'
-          >
+          <Link href='#' className='mx-auto'>
             <Button>
-              Launch App
-              <Rocket className='ml-2 size-5' />
+              Download App
+              <DownloadIcon className='ml-2 size-5' />
             </Button>
           </Link>
         </SheetFooter>

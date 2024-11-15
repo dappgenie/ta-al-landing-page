@@ -4,10 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   Boxes,
+  DownloadIcon,
+  HomeIcon,
   Menu,
   MessageCircleQuestion,
   Network,
   Rocket,
+  UserSearch,
 } from 'lucide-react';
 
 import useScreenSize from '@/lib/useScreenSize';
@@ -28,19 +31,19 @@ export interface RouteProps {
 
 export const routeList: RouteProps[] = [
   {
-    link: '#about_us',
-    name: 'About Us',
-    icon: <Boxes />,
+    link: '/#home',
+    name: 'Home',
+    icon: <HomeIcon className='w-[18px] mr-1.5' />,
   },
   {
-    link: '#how_it_works',
-    name: 'How It Works',
-    icon: <Network />,
-  },
-  {
-    link: '#faq',
+    link: '/faq',
     name: 'FAQ',
-    icon: <MessageCircleQuestion />,
+    icon: <MessageCircleQuestion className='w-[18px] mr-1.5' />,
+  },
+  {
+    link: '/about-us',
+    name: 'About Us',
+    icon: <UserSearch className='w-[18px] mr-1.5' />,
   },
 ];
 
@@ -69,19 +72,20 @@ export const Navbar = () => {
                   variant: 'ghost',
                 })}`}
               >
+                {route.icon}
                 {route.name}
               </Link>
             ))}
-            {screenSize.width >= 768 && (
-              <Link href='https://app.xnodes.bot' target='_blank'>
-                <Button>
-                  Launch App
-                  <Rocket className='ml-2 size-5' />
-                </Button>
-              </Link>
-            )}
           </NavigationMenuList>
         </NavigationMenu>
+        {screenSize.width >= 768 && (
+          <Link href='#'>
+            <Button>
+              Download App
+              <DownloadIcon className='ml-2 size-5' />
+            </Button>
+          </Link>
+        )}
         <SideNavbar>
           <Menu className='w-[20px] h-auto md:hidden' />
         </SideNavbar>

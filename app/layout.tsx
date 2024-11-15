@@ -5,7 +5,11 @@ import Head from 'next/head';
 
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
+import { Footer } from '@/components/Footer';
+import { JoinTaal } from '@/components/JoinTaal';
+import { Navbar } from '@/components/Navbar';
 import Preloader from '@/components/Preloader';
+import { ScrollToTop } from '@/components/ScrollToTop';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -85,10 +89,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {
           <>
             <Preloader />
+            <Navbar />
             {children}
-            {/* <div className='relative flex min-h-screen flex-col overflow-y-auto'> */}
-            {/* <div className='flex-1'>{children}</div> */}
-            {/* </div> */}
+            <JoinTaal />
+            <Footer />
+            <ScrollToTop />
           </>
         }
       </body>

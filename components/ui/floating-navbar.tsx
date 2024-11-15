@@ -59,31 +59,23 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          'flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-primary/[0.2] rounded-full bg-white  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4',
+          'flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-primary/[0.2] rounded-full bg-white  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-6 py-3  items-center justify-center space-x-6',
           className
         )}
       >
         {navItems.map((navItem: RouteProps, idx: number) => (
-          <a
+          <Link
             key={`link=${navItem.name}`}
             href={navItem.link}
             className={cn(
               'relative text-primary/80 items-center flex space-x-1 hover:text-primary'
             )}
           >
-            <span className='block sm:hidden'>{navItem.icon}</span>
-            <span className='hidden text-sm sm:block'>{navItem.name}</span>
-          </a>
+            <span className='text-sm sm:block hover:font-bold'>
+              {navItem.name}
+            </span>
+          </Link>
         ))}
-        <Link href='https://app.xnodes.bot' target='_blank'>
-          <button
-            type='button'
-            className='border text-sm font-medium relative border-primary/[0.2] text-primary px-4 py-2 rounded-full'
-          >
-            <span>Launch App</span>
-            <span className='absolute inset-x-0 w-1/2 h-px mx-auto -bottom-px bg-gradient-to-r from-transparent via-primary to-transparent' />
-          </button>
-        </Link>
       </motion.div>
     </AnimatePresence>
   );
