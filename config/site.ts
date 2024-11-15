@@ -9,11 +9,6 @@ export const siteConfig = {
     },
   ],
 
-  siteUrl: 'https://xnodes.dappgenie.io/',
-  imageUrl:
-    'https://res.cloudinary.com/dmrxi1emm/image/upload/v1714766008/xnodes_og_image-03_yuyhtm.png',
-  links: {
-    twitter: 'https://x.com/shadcn',
-    telegram: 'https://telegram.com',
-  },
+  siteUrl: 'https://ta-al-landing-page.vercel.app',
+  imageUrl: '/public/images/og-image-taal.png',
 };
