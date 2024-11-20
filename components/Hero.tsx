@@ -24,7 +24,7 @@ export const Hero = () => {
           <Image
             src='/images/app-store.png'
             alt='app-store'
-            className='rounded-md w-[140px] md:w-[200px] h-auto object-contain'
+            className='rounded-2xl app-store-bg w-[140px] md:w-[200px] h-auto object-contain'
             width={200}
             quality={100}
             height={72}
@@ -32,7 +32,7 @@ export const Hero = () => {
           <Image
             src='/images/google-play.png'
             alt='google-play'
-            className='rounded-md w-[140px] md:w-[200px] h-auto object-contain'
+            className='rounded-2xl app-store-bg w-[140px] md:w-[200px] h-auto object-contain'
             width={200}
             quality={100}
             height={72}

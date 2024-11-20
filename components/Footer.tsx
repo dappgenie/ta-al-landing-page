@@ -19,7 +19,7 @@ export const Footer = () => {
             <Image
               src='/images/app-store.png'
               alt='app-store'
-              className='rounded-md object-contain max-w-[150px]'
+              className='rounded-2xl app-store-bg object-contain max-w-[150px]'
               width={200}
               quality={100}
               height={72}
@@ -27,7 +27,7 @@ export const Footer = () => {
             <Image
               src='/images/google-play.png'
               alt='google-play'
-              className='rounded-md object-contain max-w-[150px]'
+              className='rounded-2xl app-store-bg object-contain max-w-[150px]'
               width={200}
               quality={100}
               height={72}
