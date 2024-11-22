@@ -48,8 +48,8 @@ export const Hero = () => {
           className='object-contain mx-auto'
           priority
         />
-        <PaymentCredited className='absolute -top-10 left-[5%]  lg:top-4 lg:-right-[10%] 2xl:-left-[40%]' />
-        <TotalIncome className='absolute -bottom-10 md:bottom-4 left-[10%] lg:-left-[20%]' />
+        <PaymentCredited className='absolute -top-10 left-[5%]  lg:top-4 lg:-right-[10%] 2xl:-right-[40%]' />
+        <TotalIncome className='absolute -bottom-10 md:bottom-4 left-[10%] lg:-right-[20%]' />
         <IconCont className='bg-[#4535AF] absolute top-[30%] left-[10%] lg:-left-[20%] -rotate-[20deg]'>
           <CheckIcon className='w-[20px] h-auto text-white' />
         </IconCont>
