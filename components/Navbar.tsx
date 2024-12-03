@@ -52,7 +52,7 @@ export const Navbar = () => {
   return (
     <>
       <FloatingNav navItems={routeList} />
-      <header className='xl:container flex items-center justify-between py-5 lg:py-10 px-4 lg:px-10 xl:px-16  bg-white/60 backdrop-blur-sm'>
+      <header className='lg:container flex items-center justify-between h-[65px] lg:h-auto py-5 lg:py-10 px-4 lg:px-10 xl:px-16  bg-white/60 backdrop-blur-sm'>
         <Link href='/' className='flex ml-2 text-xl font-bold'>
           <Image
             src='/images/logo.svg'

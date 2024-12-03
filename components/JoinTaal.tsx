@@ -6,7 +6,7 @@ export const JoinTaal = () => {
   return (
     <section
       id='howItWorks'
-      className='container py-16 sm:py-24 bg-gradient-to-br from-white to-[#E3F4EE]'
+      className='container py-16 sm:py-24 bg-gradient-to-r from-white to-[#E3F4EE]'
     >
       <Transition
         animationType='left'
