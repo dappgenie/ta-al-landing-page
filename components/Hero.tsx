@@ -10,7 +10,7 @@ export const Hero = () => {
   return (
     <section
       id='home'
-      className='container flex flex-col lg:grid lg:grid-cols-[clamp(27rem,100%,30rem)_auto] xl:grid-cols-[clamp(30rem,50%,35rem)_auto] justify-between py-14 lg:pt-16 lg:pb-6'
+      className='container relative flex flex-col lg:grid lg:grid-cols-[clamp(27rem,100%,30rem)_auto] xl:grid-cols-[clamp(30rem,50%,35rem)_auto] justify-between py-14 lg:pt-10 lg:pb-6'
     >
       <div className='flex flex-col justify-between text-center lg:text-start space-y-6'>
         <h1 className='text-3xl md:text-4xl md:leading-[2.7rem] text-center lg:text-left lg:text-4xl lg:leading-[3.5rem] xl:text-5xl xl:leading-[4rem] font-bold'>
@@ -40,7 +40,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className='relative mt-20 lg:mt-0'>
+      <div className='relative z-20 mt-20 lg:mt-0'>
         <Image
           src={HeroIllustration}
           alt='hero-illustration'
@@ -60,7 +60,6 @@ export const Hero = () => {
           <MessageSquare className='w-[20px] h-auto text-white' />
         </IconCont>
       </div>
-
       <div className='shadow' />
     </section>
   );

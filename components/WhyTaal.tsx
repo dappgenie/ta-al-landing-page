@@ -9,7 +9,7 @@ import TotalIncome from './highlight-elements/total-income';
 
 export const WhyTaal = () => {
   return (
-    <section id='howItWorks' className='container py-16 sm:py-24 lg:pt-5'>
+    <section id='howItWorks' className='container py-16 sm:py-24 lg:pt-14'>
       <Transition
         animationType='left'
         className='text-3xl font-bold md:text-4xl'

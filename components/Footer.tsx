@@ -15,7 +15,7 @@ export const Footer = () => {
             className='w-[130px] h-[160px] object-contain'
             alt='Logo'
           />
-          <div className='flex justify-start items-center space-x-6 md:ml-[-35px]'>
+          <div className='flex justify-start items-center space-x-6'>
             <Image
               src='/images/app-store.png'
               alt='app-store'

@@ -72,7 +72,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </Head>
       <body
         className={cn(
-          'min-h-screen bg-background font-inter antialiased relative',
+          'min-h-screen bg-background font-inter antialiased relative overflow-x-hidden',
           inter.className,
           inter.variable
         )}
