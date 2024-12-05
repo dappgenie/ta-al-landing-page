@@ -34,7 +34,7 @@ export const Footer = () => {
             />
           </div>
           <div className='flex gap-x-5 text-sm text-[#0D0D0D] mt-7 flex-wrap'>
-            <span>© 2024 EazyGig. All Rights Reserved.</span>
+            <span>© 2024 Ta'al. All Rights Reserved.</span>
             {/* <span>Terms & Conditions</span>
             <span>Privacy policy</span> */}
           </div>

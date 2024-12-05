@@ -33,17 +33,17 @@ export const routeList: RouteProps[] = [
   {
     link: '/#home',
     name: 'Home',
-    icon: <HomeIcon className='w-[18px] mr-1.5' />,
+    // icon: <HomeIcon className='w-[18px] mr-1.5' />,
   },
   {
     link: '/faq',
     name: 'FAQ',
-    icon: <MessageCircleQuestion className='w-[18px] mr-1.5' />,
+    // icon: <MessageCircleQuestion className='w-[18px] mr-1.5' />,
   },
   {
     link: '/about-us',
     name: 'About Us',
-    icon: <UserSearch className='w-[18px] mr-1.5' />,
+    // icon: <UserSearch className='w-[18px] mr-1.5' />,
   },
 ];
 
@@ -52,7 +52,7 @@ export const Navbar = () => {
   return (
     <>
       <FloatingNav navItems={routeList} />
-      <header className='lg:container flex items-center justify-between h-[65px] lg:h-auto py-5 lg:py-10 px-4 lg:px-10 xl:px-16  bg-white/60 backdrop-blur-sm'>
+      <header className='lg:container flex items-center justify-between h-[65px] lg:h-auto py-5 lg:py-10 px-4 lg:px-4 xl:px-6 2xl:px-14  bg-white/60 backdrop-blur-sm'>
         <Link href='/' className='flex ml-2 text-xl font-bold'>
           <Image
             src='/images/logo.svg'
@@ -72,7 +72,7 @@ export const Navbar = () => {
                   variant: 'ghost',
                 })}`}
               >
-                {route.icon}
+                {/* {route.icon} */}
                 {route.name}
               </Link>
             ))}
@@ -80,14 +80,14 @@ export const Navbar = () => {
         </NavigationMenu>
         {screenSize.width >= 768 && (
           <Link href='#'>
-            <Button>
+            <Button className='rounded-full px-6 py-4 h-[50px]'>
               Download App
-              <DownloadIcon className='ml-2 size-5' />
+              {/* <DownloadIcon className='ml-2 size-5' /> */}
             </Button>
           </Link>
         )}
         <SideNavbar>
-          <Menu className='w-[20px] h-auto md:hidden' />
+          <Menu className='w-[20px] relative z-50 h-auto md:hidden' />
         </SideNavbar>
       </header>
     </>
