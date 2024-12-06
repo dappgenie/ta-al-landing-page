@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { DownloadIcon, Rocket } from 'lucide-react';
 
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetFooter,
   SheetHeader,
@@ -37,14 +38,16 @@ const SideNavbar = ({ children }: { children: React.ReactNode }) => {
             <Link
               key={name}
               href={link}
-              className={buttonVariants({ variant: 'ghost' })}
+              className={buttonVariants({ variant: 'ghost' }) + ' outline-none'}
             >
-              <span className='py-4'>{name}</span>
+              <SheetClose className='outline-none'>
+                <span className='py-4'>{name}</span>
+              </SheetClose>
             </Link>
           ))}
         </nav>
         <SheetFooter className='mt-8'>
-          <Link href='#' className='mx-auto'>
+          <Link href='#' className='mx-auto outline-none'>
             <Button>
               Download App
               <DownloadIcon className='ml-2 size-5' />

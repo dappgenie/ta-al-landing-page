@@ -31,7 +31,7 @@ export interface RouteProps {
 
 export const routeList: RouteProps[] = [
   {
-    link: '/#home',
+    link: '/',
     name: 'Home',
     // icon: <HomeIcon className='w-[18px] mr-1.5' />,
   },
