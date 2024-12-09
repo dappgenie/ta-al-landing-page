@@ -5,10 +5,8 @@ import { Transition } from '@/components/Transition';
 
 export default function Page() {
   return (
-    <section
-      id='aboutUs'
-      className='container relative py-14 lg:py-16 before:contents-[*] before:absolute before:right-0 before:-top-10 before:w-1/2 before:h-full before:bg-primary before:rounded-full before:opacity-40 before:blur-[150px] lg:before:blur-[200px]'
-    >
+    <section id='aboutUs' className='container relative py-14 lg:py-16'>
+      <div className='shadow' />
       <Transition
         animationType='left'
         className='text-3xl font-bold md:text-4xl'
