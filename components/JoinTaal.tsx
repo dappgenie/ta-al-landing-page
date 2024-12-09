@@ -5,8 +5,8 @@ import { Transition } from './Transition';
 export const JoinTaal = () => {
   return (
     <section
-      id='howItWorks'
-      className='container py-16 sm:py-24 bg-gradient-to-r from-white to-[#E3F4EE]'
+      id='joinTaal'
+      className='container mx-0 max-w-full py-16 sm:py-24 bg-gradient-to-r from-white to-[#E3F4EE]'
     >
       <Transition
         animationType='left'

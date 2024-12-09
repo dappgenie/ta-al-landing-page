@@ -15,7 +15,7 @@ export const Hero = () => {
     >
       <div className='flex flex-col justify-between text-center lg:text-start space-y-6 shrink-0'>
         <h1 className='text-3xl md:text-4xl md:leading-[2.7rem] text-center lg:text-left lg:text-4xl lg:leading-[3.5rem] xl:text-5xl xl:leading-[4rem] font-bold'>
-          Start earning <span className='text-primary mx-2'>today!</span> <br />{' '}
+          Start earning <span className='text-primary'>today!</span> <br />{' '}
           Complete gigs, get <br /> paid in no time
         </h1>
         <div className='flex-center mt-4 gap-x-6 md:grid p-2 lg:-ml-2 md:grid-cols-2 w-auto overflow-hidden md:max-w-[25rem] lg:max-w-[25rem] xl:max-w-[29rem] mx-auto'>
