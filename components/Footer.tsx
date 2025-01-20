@@ -57,6 +57,14 @@ export const Footer = () => {
               About Us
             </Link>
           </div>
+          <div>
+            <Link
+              href='/privacy-policy'
+              className='opacity-60 hover:opacity-100'
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </section>
     </footer>

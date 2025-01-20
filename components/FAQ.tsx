@@ -70,16 +70,6 @@ const FAQList: FAQProps[] = [
         After setting up your profile, browse the available gigs on the app,
         select the one you're interested in, and click 'Apply.' You'll be
         notified of your application status as soon as there's an update.
-        <br />
-        <br />
-        <br />
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut soluta
-        quaerat veniam nostrum temporibus ut quod, placeat inventore est et.
-        Reiciendis quasi a debitis atque, illum aperiam tempore sint corrupti.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
-        consectetur porro. Repellendus numquam facilis repudiandae iste rem ut
-        impedit quasi voluptas? Ut officia delectus corporis asperiores repellat
-        obcaecati enim id.
       </p>
     ),
     value: 'item-5',

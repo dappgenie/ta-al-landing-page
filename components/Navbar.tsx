@@ -45,11 +45,6 @@ export const routeList: RouteProps[] = [
     name: 'About Us',
     // icon: <UserSearch className='w-[18px] mr-1.5' />,
   },
-  {
-    link: '/privacy-policy',
-    name: 'Privacy Policy',
-    // icon: <UserSearch className='w-[18px] mr-1.5' />,
-  },
 ];
 
 export const Navbar = () => {
