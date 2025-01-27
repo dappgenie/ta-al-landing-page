@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
+import Script from 'next/script';
 
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
@@ -68,6 +69,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta
           property='og:description'
           content='Complete gigs, get paid within hours. Start earning instantly!'
+        />
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script
+          src='https://www.googletagmanager.com/gtag/js?id=G-YZZ6S0QXRP'
+          strategy='afterInteractive'
+        />
+        <Script id='google-analytics' strategy='afterInteractive'>
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'G-YZZ6S0QXRP');
+        `}
+        </Script>
+        <meta
+          name='google-site-verification'
+          content='QTacNJN6M5tVYf66N4cJByO_xqog68DJwNQ5T4Vq4Xw'
         />
       </Head>
       <body
