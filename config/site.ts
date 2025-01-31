@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
-  name: 'Ta-al',
-  description: 'Complete gigs, get paid within hours. Start earning instantly!',
+  name: `Trusted Freelancer Hiring Platform for Fast Gigs | Ta'al`,
+  description: `Ta'al is a top freelancer hiring platform for quick applications, top-rated gigs & fast payments. Start earning today with flexible & verified job offers!`,
   mainNav: [
     {
       title: 'Home',
