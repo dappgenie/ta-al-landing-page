@@ -1,7 +1,15 @@
 import React from 'react';
+import { Metadata } from 'next';
 
+import { siteConfig } from '@/config/site';
 import { CheckIcon } from '@/lib/index-icons';
 import { Transition } from '@/components/Transition';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: `${siteConfig.siteUrl}about-us`,
+  },
+};
 
 export default function Page() {
   return (

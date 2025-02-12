@@ -9,6 +9,6 @@ export const siteConfig = {
     },
   ],
 
-  siteUrl: 'https://ta-al-landing-page.vercel.app',
+  siteUrl: 'https://taaluae.com/',
   imageUrl: '/public/images/og-image-taal.png',
 };
