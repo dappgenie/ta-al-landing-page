@@ -1,7 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 
+
+
 import { Transition } from '@/components/Transition';
+import { Metadata } from 'next';
+import { siteConfig } from '@/config/site';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: `${siteConfig.siteUrl}`,
+  },
+};
 
 export default function Page() {
   return (
